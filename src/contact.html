@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>JsSI - Contacto</title>
+  </head>
+  <body>
+    <div class="o-page-container">
+      <header>
+        <include src="./views/header.html"></include>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="link-secondary" href="./index.html">Inicio</a></li>
+            <li class="breadcrumb-item" aria-current="page">Contáctanos</li>
+          </ol>
+        </nav>
+      </header>
+      <div class="container o-contact-container">
+        <h1 class="o-title">Formulario de contacto</h1>
+        <form class="c-contact-form" name="contact" netlify>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <p>
+            <button type="submit" class="btn btn-secondary btn-md">Enviar</button>
+          </p>
+        </form>
+      </div>
+      <include src="./views/footer.html"></include>
+    </div>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

@@ -5,23 +5,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Jornadas de Seguridad Informática</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+    <div class="o-page-container">
+      <header>
+        <include src="./views/header.html"></include>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="link-secondary" href="./index.html">Inicio</a></li>
+          </ol>
+        </nav>
+      </header>
+      <div class="container o-home-container">
+        <div class="o-home-text-container c-home-title">
+          <h1>Jornadas de Seguridad Informática</h1>
+        </div>
+        <div class="o-home-text-container c-home-year">
+          <h2>2024</h2>
+        </div>
+        <div class="o-home-text-container c-home-paragraph">
+          <p>
+            ¡Bienvenidos a las Jornadas de Seguridad Informática! Disfruta de charlas inspiradoras
+            de expertos, un emocionante concurso de programación en seguridad y otras actividades
+            únicas.
+          </p>
+        </div>
+        <div class="c-home-nav-links">
+          <a href="./participants.html" role="button" class="btn btn-secondary btn-md">Participantes</a>
+          <a href="./information.html" role="button" class="btn btn-secondary btn-md">Información</a>
+          <a href="./contact.html" role="button" class="btn btn-secondary btn-md">Contáctanos</a>
+        </div>
+        <picture class="o-home-picture">
+          <source srcset="./assets/images/cybersecurity.png?as=webp" type="image/webp" />
+          <img src="./assets/images/cybersecurity.png" alt="Cybersecurity" />
+        </picture>
+      </div>
+      <include src="./views/footer.html"></include>
     </div>
-    <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>

@@ -1,0 +1,15 @@
+@use "sass:color";
+
+// Calcular color para textos sobre un color de fondo determinado
+@function on-color($color) {
+  $hue: color.hue($color);
+  $lightness: color.lightness($color);
+
+  @if $lightness > 50 {
+    // Si el color es claro, haz saturación 100% y lightness 0% (negro)
+    @return hsl($hue, 100%, 0%);
+  } @else {
+    // Si el color es oscuro, haz saturación 0% y lightness 100% (blanco)
+    @return hsl($hue, 0%, 100%);
+  }
+}

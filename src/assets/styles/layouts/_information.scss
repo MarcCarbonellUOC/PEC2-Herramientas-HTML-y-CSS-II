@@ -1,0 +1,230 @@
+@layer reset, defaults, patterns, components, overrides;
+
+@layer defaults {
+  .o-information-container {
+    p:first-of-type {
+      font-size: 1.25rem;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@layer patterns {
+  .o-information-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 2.75rem;
+    margin-block-end: 5rem;
+    flex-direction: column;
+    justify-self: center;
+    gap: 3rem;
+    container-type: inline-size;
+    container-name: information-container;
+  }
+}
+
+@layer components {
+  .o-information-container {
+    :where(blockquote, ol) {
+      margin: 0;
+      position: relative;
+    }
+
+    blockquote{
+      padding: 1rem 0 1rem 4.5rem;
+      color: #fff;
+      font-size: 1.4rem;
+      width: 100%;
+      font-style: italic;
+      border-inline-start: 8px solid $secondary;
+      line-height: 1.6;
+    }
+    
+    blockquote::before {
+      content: "\201C";
+      color: $secondary;
+      font-size: 6rem;
+      position: absolute;
+      left: .75rem;
+      top: -1.5rem;
+    }
+
+    blockquote:has(span) {
+      font-size: 1.25rem;
+    }
+
+    blockquote span{
+      display: block;
+      font-weight: bold;
+      margin-block-start: 1rem;
+    }
+
+    ol {
+      padding: 0;
+      margin-left: 2rem;
+    }
+      
+    li {
+      padding: 0 1.5rem 1rem;
+      color: $on-secondary;
+      background: $secondary;
+      border-radius: 20px;
+    }
+    
+    li + li {
+      margin-block-start: 1rem;
+    }
+    
+    ::marker {
+      font-weight: 600;
+      color: $secondary;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@layer overrides {
+  @media screen and (min-width: 768px) {
+    .o-information-container {
+      width: 75%;
+    }
+  }
+  
+  @media screen and (min-width: 1012px) {
+    .o-information-container {
+      width: 60%;
+    }
+  }
+  
+  @container information-container (min-width: 476px) {
+    .o-information-container{ 
+      blockquote {
+        width: 85%;
+      }
+    }
+  }
+  
+  @container information-container (min-width: 573px) {
+    .o-information-container{ 
+      blockquote {
+        width: 70%;
+      }
+    }
+  }  
+}
+
+
+// .o-information-container {
+//   width: 90%;
+//   height: auto;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-block-start: 2.75rem;
+//   margin-block-end: 5rem;
+//   flex-direction: column;
+//   gap: 3rem;
+//   container-type: inline-size;
+//   container-name: information-container;
+
+//   p:first-of-type {
+//     font-size: 1.25rem;
+//   }
+
+//   img {
+//     width: 100%;
+//     object-fit: cover;
+//   }
+
+//   :where(blockquote, ol) {
+//     margin: 0;
+//     position: relative;
+//   }
+
+//   blockquote{
+//     padding: 1rem 0 1rem 4.5rem;
+//     color: #fff;
+//     font-size: 1.4rem;
+//     width: 100%;
+//     font-style: italic;
+//     border-inline-start: 8px solid $secondary;
+//     line-height: 1.6;
+//   }
+  
+//   blockquote::before {
+//     content: "\201C";
+//     color: $secondary;
+//     font-size: 6rem;
+//     position: absolute;
+//     left: .75rem;
+//     top: -1.5rem;
+//   }
+
+//   blockquote:has(span) {
+//     font-size: 1.25rem;
+//   }
+
+//   blockquote span{
+//     display: block;
+//     font-weight: bold;
+//     margin-block-start: 1rem;
+//   }
+
+//   ol {
+//     padding: 0;
+//     margin-left: 2rem;
+//   }
+    
+//   li {
+//     padding: 0 1.5rem 1rem;
+//     color: $on-secondary;
+//     background: $secondary;
+//     border-radius: 20px;
+//   }
+  
+//   li + li {
+//     margin-block-start: 1rem;
+//   }
+  
+//   ::marker {
+//     font-weight: 600;
+//     color: $secondary;
+//     font-size: 1.8rem;
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .o-information-container {
+//     width: 75%;
+//   }
+// }
+
+// @media screen and (min-width: 1012px) {
+//   .o-information-container {
+//     width: 60%;
+//   }
+// }
+
+// @container information-container (min-width: 476px) {
+//   .o-information-container{ 
+//     blockquote {
+//       width: 85%;
+//     }
+//   }
+// }
+
+// @container information-container (min-width: 573px) {
+//   .o-information-container{ 
+//     blockquote {
+//       width: 70%;
+//     }
+//   }
+// }
+

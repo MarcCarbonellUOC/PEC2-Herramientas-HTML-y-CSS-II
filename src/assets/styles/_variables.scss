@@ -1,12 +1,81 @@
 @use "sass:color";
+@use './tools' as tools;
+
+
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('../fonts/PressStart2P-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('../fonts/Geist-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist-bold';
+  src: url('../fonts/Geist-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Helvetica Neue", "Geist", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$logo-font-family: "PressStart2P";
 
-$mqMinWidth: 420px;
+$body-bg: #141414;
+$body-color: #fff;
+
+$primary: #1e5b1e;
+$secondary: #3aaf3a;
+$input-focus-border-color: $secondary;
+
+$on-primary: tools.on-color($primary);
+$on-secondary: 	tools.on-color($secondary);
+
+$font-sizes: (
+  "sm": 0.875rem, 
+  "md": 1rem,     
+  "lg": 1.25rem, 
+  "xl": 2rem,     
+  "xxl": 3.75rem
+);
+
+$headings-font-family: "Geist-bold", serif;
+
+// Buttons
+$btn-padding-y-lg: 10px;
+$btn-padding-x-lg: 10px;
+$btn-font-family: "Geist";
+$btn-font-size-lg: 1.15rem;
+$btn-white-space: nowrap;
+
+//Navbar
+$navbar-dark-color: #141414;
+$navbar-padding-y: 1rem;
+$navbar-padding-x: 4rem;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color:#fff;
+$navbar-brand-font-size: 1.75rem;
+
+//Breadcrumbs
+$breadcrumb-padding-y: .5rem;
+$breadcrumb-padding-x: 4.5rem;
+$breadcrumb-item-padding-x: .5rem;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg:  #252525;
+$breadcrumb-divider-color:  #fff;
+$breadcrumb-active-color: #fff;
+
+//Carrousel
+$carousel-control-icon-width: 3rem;
+$carousel-control-color: $secondary;
+$carousel-control-opacity: .6;
+$carousel-control-hover-opacity: 1;

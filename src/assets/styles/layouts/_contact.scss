@@ -1,0 +1,46 @@
+.o-contact-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-block-start: 2.75rem;
+  margin-block-end: 5rem;
+  flex-direction: column;
+  gap: 3rem;
+  container-type: inline-size;
+  container-name: contact-container;
+  min-height: 100dvh;
+}
+
+.c-contact-form {
+  width: 65cqi;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  button {
+    background-color: hwb(120 23% 31%);
+  }
+  button, button:hover {
+    color: color(display-p3 1 1 1);
+    width: 100%;
+  }
+}
+
+@container contact-container (min-width: 600px) {
+  .c-contact-form {
+    width: 55cqi;
+  }
+}
+
+@container contact-container (min-width: 900px) {
+  .c-contact-form {
+    width: 45cqi;
+  }
+}
+
+@container contact-container (min-width: 1100px) {
+  .c-contact-form {
+    width: 40cqi;
+  }
+}
