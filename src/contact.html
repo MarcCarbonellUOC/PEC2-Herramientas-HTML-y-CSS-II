@@ -20,18 +20,18 @@
       </header>
       <div class="container o-contact-container">
         <h1 class="o-title">Formulario de contacto</h1>
-        <form class="c-contact-form" name="contact" netlify>
+        <form class="c-contact-form" method="post" name="contact" netlify>
           <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="name" required>
+            <input type="text" class="form-control" name="name" required>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" required>
+            <input type="email" class="form-control" name="email" required>
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="message" rows="3"></textarea>
+            <textarea class="form-control" name="message" rows="3" required></textarea>
           </div>
           <p>
             <button type="submit" class="btn btn-secondary btn-md">Enviar</button>
